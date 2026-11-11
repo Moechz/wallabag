@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "wallabagdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[zh-cn]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "稍后读服务，保存网页正文供离线阅读与全文搜索。"
+release_note = "1. First release."
+important    = "首次使用请打开网页完成初始化。数据保存在 DockerAppData/wallabagdocker，重启和升级不会丢失。容器以 uid 1000 运行，挂载目录需对该用户可读。需要 DockerEngine；Docker Hub 不可达时先配置镜像加速。卸载并删除数据前请备份。局域网内为 HTTP。"
+
+[zh-hk]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "稍后读服务，保存网页正文供离线阅读与全文搜索。"
+release_note = "1. First release."
+important    = "首次使用請開啟網頁完成初始化。資料保存在 DockerAppData/wallabagdocker，重新啟動和升級不會遺失。容器以 uid 1000 運行，掛載目錄需對該使用者可讀。需要 DockerEngine；Docker Hub 不可達時先設定鏡像加速。解除安裝並刪除資料前請備份。區域網路內為 HTTP。"
+
+[fr-fr]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[de-de]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[it-it]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[es-es]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[hu-hu]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ja-jp]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ko-kr]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[pl-pl]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ru-ru]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[tr-tr]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[pt-pt]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[ar-sa]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[cs-cz]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[he-il]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[id-id]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[nb-no]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[nl-nl]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[sv-se]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[th-th]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+
+[vi-vn]
+name         = "docker"
+auth         = "wallabag"
+version      = "@@VERSION@@"
+descript     = "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon."
+release_note = "1. First release."
+important    = "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN."
+

@@ -1,0 +1,103 @@
+{
+  "app_id": "wallabagdocker",
+  "title": "docker",
+  "image": "wallabag/wallabag:2.6.14",
+  "repo_name": "wallabag",
+  "mode": "wrapper",
+  "container_port": 8080,
+  "category": [
+    "Utilities"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/wallabagdocker/data",
+      "container": "/var/www/wallabag/data"
+    },
+    {
+      "host": "/Volume1/DockerAppData/wallabagdocker/images",
+      "container": "/var/www/wallabag/web/assets/images"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai",
+    "SYMFONY__ENV__DOMAIN_NAME": "http://${ip}:8080",
+    "SYMFONY__ENV__SERVER_NAME": "Wallabag"
+  },
+  "auth": "wallabag",
+  "upstream_url": "https://github.com/wallabag/docker",
+  "upstream_license": "",
+  "descript": "Official docker-composer for wallabag. Packaged for TerraMaster TOS 7: the official Docker Hub image runs as a container on your NAS, keeps its data in the application data folder (so it survives restarts and updates), and is opened from its desktop icon.",
+  "release_note": "1. First release.",
+  "important": "First run: open the web UI and complete the initial setup. Data lives in /Volume1/DockerAppData/wallabagdocker/ and survives restarts and updates. The container runs as uid 1000, so mounted folders must be readable by that user. Needs DockerEngine; configure a registry mirror if Docker Hub is unreachable. Back up the application data folder before uninstalling with data removal. Plain HTTP on the LAN.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/entrypoint.sh"
+    ],
+    "cmd": [
+      "wallabag"
+    ],
+    "exposed_ports": [
+      80
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [
+      "CMD-SHELL",
+      "curl --fail --silent --show-error --user-agent healthcheck http://localhost/api/info || exit 1"
+    ],
+    "digest": "wallabag/wallabag@sha256:4a527e027e0d59e87c14225ef11e005af3d4890374202ad319ce5e63dfc66709",
+    "architecture": "x86_64",
+    "platforms": [],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": false,
+      "http_code": "",
+      "state": "exited",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "Starting wallabag ...\n/entrypoint.sh: line 30: can't create app/config/parameters.yml: Permission denied",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "wallabag",
+      "repo": "docker",
+      "description": "Official docker-composer for wallabag. ",
+      "license": "",
+      "homepage": ""
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "wget -q --spider http://127.0.0.1:8080/api/info || exit 1"
+  ],
+  "entrypoint_file": "specs/wallabag-entrypoint.sh",
+  "platform": "x86_64",
+  "user": "65534:65534",
+  "publisher": "Moechz",
+  "compose_project": "wallabagdocker",
+  "github_repo": "wallabag",
+  "upstream_version": "2.6.14",
+  "release_tag_prefix": "v",
+  "version": "2.6.14-1",
+  "help": "https://github.com/Moechz/wallabag/issues",
+  "official": "https://github.com/wallabag/docker",
+  "license": "see upstream",
+  "docker_socket": false,
+  "group_add": [],
+  "platforms": [
+    "x86_64",
+    "aarch64"
+  ],
+  "translations": {
+    "zh-cn": {
+      "descript": "稍后读服务，保存网页正文供离线阅读与全文搜索。",
+      "important": "首次使用请打开网页完成初始化。数据保存在 DockerAppData/wallabagdocker，重启和升级不会丢失。容器以 uid 1000 运行，挂载目录需对该用户可读。需要 DockerEngine；Docker Hub 不可达时先配置镜像加速。卸载并删除数据前请备份。局域网内为 HTTP。"
+    },
+    "zh-hk": {
+      "descript": "稍后读服务，保存网页正文供离线阅读与全文搜索。",
+      "important": "首次使用請開啟網頁完成初始化。資料保存在 DockerAppData/wallabagdocker，重新啟動和升級不會遺失。容器以 uid 1000 運行，掛載目錄需對該使用者可讀。需要 DockerEngine；Docker Hub 不可達時先設定鏡像加速。解除安裝並刪除資料前請備份。區域網路內為 HTTP。"
+    }
+  },
+  "host_port": 8062
+}

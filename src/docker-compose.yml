@@ -1,0 +1,60 @@
+# ===========================================================================
+# docker for TerraMaster TOS 7 (Docker application)
+# ===========================================================================
+# Upstream image : wallabag/wallabag:2.6.14 (Docker Hub, used unmodified)
+#                  -> https://github.com/wallabag/docker
+#
+# Ports   : host 8062 -> container 8080. The host port is in the
+#           TOS-recommended 8000-19999 range and is not one of the reserved
+#           ports (22/80/443/445/3306/5050/5432/6379/8181/8443).
+# Volumes : all persistent data lives below
+#           /Volume1/DockerAppData/wallabagdocker/. The /Volume* wildcard is
+#           deliberately NOT used: the platform does not expand it.
+# TOS rules honoured: Docker Hub image with a fixed tag (never ':latest'),
+#           container_name == application id, restart: unless-stopped,
+#           non-root user, no privileged mode, no network_mode: host, no
+#           cap_add, explicit TZ, a healthcheck on the only service, and
+#           x-app-meta as the last block.
+# Wrapper : the upstream image runs as root; the entrypoint below replaces
+#           it so the service can run as an unprivileged user.
+# Escaping: docker compose interpolates ${VAR}/$VAR in compose files, so any
+#           '$' meant for the shell is written '$$'.
+#
+# NOTE for maintainers: never place a comment line directly in front of a
+# "- value" sequence item (ports, volumes, ...). The official
+# TOSAppSelfTestingTool parses the compose file line by line; a comment inside
+# a sequence makes it skip its permission sync, the mounted directories stay
+# root-owned and the non-root container cannot write into them.
+
+services:
+  wallabagdocker:
+    image: wallabag/wallabag:2.6.14
+    container_name: wallabagdocker
+    restart: unless-stopped
+    user: "65534:65534"
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        @@ENTRYPOINT_SH@@
+    ports:
+      - "8062:8080"
+    environment:
+      TZ: "Asia/Shanghai"
+      SYMFONY__ENV__DOMAIN_NAME: "http://$${ip}:8080"
+      SYMFONY__ENV__SERVER_NAME: "Wallabag"
+    volumes:
+      - /Volume1/DockerAppData/wallabagdocker/data:/var/www/wallabag/data
+      - /Volume1/DockerAppData/wallabagdocker/images:/var/www/wallabag/web/assets/images
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:8080/api/info || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+# TOS App Center web metadata (must be the last block of the file):
+# web.port is the published host port above, protocol is http.
+x-app-meta:
+  web:
+    port: 8062
+    protocol: http
